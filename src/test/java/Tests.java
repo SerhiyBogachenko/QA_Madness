@@ -34,7 +34,7 @@ public class Tests {
 
     @Test
     public void accountLoginVerification(){
-        loginPage.accountLogin();
+        loginPage.accountLogin(loginPage.name, loginPage.password);
         Assert.assertEquals(loginPage.accountName.getText(), "Serhiitest");
     }
 }
