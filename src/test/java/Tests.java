@@ -18,23 +18,23 @@ public class Tests {
         open(loginPage.ligInPageUrl);
     }
 
-    @Test
+    @Test (priority = 0)
     public void checkNameField(){
         loginPage.enterName(loginPage.name);
         Assert.assertTrue(loginPage.accountNameField != null);
-        element(loginPage.accountNameField).clear();
+//        element(loginPage.accountNameField).clear();
     }
 
-    @Test
+    @Test (priority = 1)
     public void checkPasswordField(){
         loginPage.enterPassword(loginPage.password);
         Assert.assertTrue(loginPage.passwordField != null);
-        element(loginPage.passwordField).clear();
+//        element(loginPage.passwordField).clear();
     }
 
-    @Test
+    @Test (priority = 2)
     public void accountLoginVerification(){
-        loginPage.accountLogin(loginPage.name, loginPage.password);
+        loginPage.accountLogin();
         Assert.assertEquals(loginPage.accountName.getText(), loginPage.name);
     }
 }

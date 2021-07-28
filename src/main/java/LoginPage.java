@@ -24,9 +24,9 @@ public class LoginPage {
         passwordField.sendKeys(password);
     }
 
-    public void accountLogin(String name, String password){
-        enterName(name);
-        enterPassword(password);
+    public void accountLogin(){
+//        enterName(name);
+//        enterPassword(password);
         enterButton.click();
     }
 }
