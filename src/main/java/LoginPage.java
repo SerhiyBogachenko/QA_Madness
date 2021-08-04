@@ -1,8 +1,7 @@
+import groovy.util.logging.Log;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.*;
-
 
 public class LoginPage {
 
@@ -15,18 +14,18 @@ public class LoginPage {
     WebElement enterButton = $("#wpLoginAttempt");
     WebElement accountName = $("#pt-userpage");
 
-
-    public void enterName(String name){
+    public LoginPage enterName(String name) {
         accountNameField.sendKeys(name);
+        return this;
     }
 
-    public void enterPassword(String password){
+    public LoginPage enterPassword(String password) {
         passwordField.sendKeys(password);
+        return this;
     }
 
-    public void accountLogin(){
-//        enterName(name);
-//        enterPassword(password);
+    public LoginPage accountLogin() {
         enterButton.click();
+        return this;
     }
 }
