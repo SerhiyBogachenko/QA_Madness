@@ -1,6 +1,4 @@
 import com.codeborne.selenide.SelenideElement;
-import groovy.util.logging.Log;
-import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Selenide.*;
 
