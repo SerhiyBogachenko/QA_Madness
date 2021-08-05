@@ -1,3 +1,4 @@
+import com.codeborne.selenide.SelenideElement;
 import groovy.util.logging.Log;
 import org.openqa.selenium.WebElement;
 
@@ -9,18 +10,18 @@ public class LoginPage {
     String name = "Serhiitest";
     String password = "bss0964124714";
 
-    WebElement accountNameField = $("#wpName1");
-    WebElement passwordField = $("#wpPassword1");
-    WebElement enterButton = $("#wpLoginAttempt");
-    WebElement accountName = $("#pt-userpage");
+    private final SelenideElement accountNameField = $("#wpName1");
+    private final SelenideElement passwordField = $("#wpPassword1");
+    private final SelenideElement enterButton = $("#wpLoginAttempt");
+    SelenideElement accountName = $("#pt-userpage");
 
-    public LoginPage enterName(String name) {
-        accountNameField.sendKeys(name);
+    public LoginPage enterName() {
+        accountNameField.setValue(name);
         return this;
     }
 
-    public LoginPage enterPassword(String password) {
-        passwordField.sendKeys(password);
+    public LoginPage enterPassword() {
+        passwordField.setValue(password);
         return this;
     }
 

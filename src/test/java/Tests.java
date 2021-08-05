@@ -17,14 +17,14 @@ public class Tests {
 
     @Test(priority = 0)
     public void checkNameField() {
-        loginPage.enterName(loginPage.name);
-        Assert.assertTrue(loginPage.accountNameField != null);
+        loginPage.enterName();
+        Assert.assertTrue(loginPage.enterName() != null);
     }
 
     @Test(priority = 1)
     public void checkPasswordField() {
-        loginPage.enterPassword(loginPage.password);
-        Assert.assertTrue(loginPage.passwordField != null);
+        loginPage.enterPassword();
+        Assert.assertTrue(loginPage.enterPassword() != null);
     }
 
     @Test(priority = 2)
