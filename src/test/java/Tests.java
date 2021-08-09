@@ -30,6 +30,6 @@ public class Tests {
     @Test(priority = 2)
     public void accountLoginVerification() {
         loginPage.accountLogin();
-        Assert.assertEquals(loginPage.accountName.getText(), loginPage.name);
+        Assert.assertEquals(loginPage.getAccountName().getText(), loginPage.name);
     }
 }
