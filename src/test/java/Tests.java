@@ -18,13 +18,13 @@ public class Tests {
     @Test(priority = 0)
     public void checkNameField() {
         loginPage.enterName();
-        Assert.assertTrue(loginPage.enterName() != null);
+        Assert.assertNotNull(loginPage.enterName());
     }
 
     @Test(priority = 1)
     public void checkPasswordField() {
         loginPage.enterPassword();
-        Assert.assertTrue(loginPage.enterPassword() != null);
+        Assert.assertNotNull(loginPage.enterPassword());
     }
 
     @Test(priority = 2)

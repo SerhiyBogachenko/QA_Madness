@@ -23,9 +23,8 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage accountLogin() {
+    public void accountLogin() {
         enterButton.click();
-        return this;
     }
 
     public SelenideElement getAccountName() {
