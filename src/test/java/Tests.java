@@ -15,19 +15,19 @@ public class Tests {
         open(loginPage.ligInPageUrl);
     }
 
-    @Test(priority = 0)
+    @Test(priority = 1)
     public void checkNameField() {
         loginPage.enterName();
         Assert.assertNotNull(loginPage.enterName());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void checkPasswordField() {
         loginPage.enterPassword();
         Assert.assertNotNull(loginPage.enterPassword());
     }
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void accountLoginVerification() {
         loginPage.accountLogin();
         Assert.assertEquals(loginPage.getAccountName().getText(), loginPage.name);
